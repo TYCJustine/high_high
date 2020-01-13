@@ -158,7 +158,7 @@ pygame.init()
 #-----------------------------------------------------------------------------------
 #預宣告
 runnung, waiting = True, True
-ranking, gaming, showing, named, debug = False, False, False, False, True
+ranking, gaming, showing, named, debug = False, False, False, False, False
 sets = sets()
 clock = pygame.time.Clock()
 name = ''
@@ -229,12 +229,12 @@ while runnung:
 			screen.blit(TypeName,[(sets.screensize[0]-TypeName.get_rect()[2])//2,sets.screensize[1]//2+170])
 			Name = font.render(name,True,(0,0,0))
 			screen.blit(Name,[(sets.screensize[0]-Name.get_rect()[2])//2,545])
-		shine = -3
-		shinecolor = [252,252,252]
+		shine = -1
+		shinecolor = [254,254,254]
 		while First_time:
 			Render((255,255,255))
 			Tip = font.render('Press "Space" to release the house !',True,shinecolor)
-			if shinecolor[0] == 0:shine = 3
+			if shinecolor[0] == 0:shine = 1
 			if shinecolor[0] == 255:
 				First_time = False
 				break
